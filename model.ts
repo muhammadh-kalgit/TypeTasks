@@ -1,14 +1,13 @@
-
-type taskStatus = 'Todo' | 'In-Progress' | 'Done';
+type TaskStatus = "todo" | "in-progress" | "done";
 interface Task{
     id: number;
     title: string;
-    status: taskStatus;
+    status: TaskStatus;
 }
 
 function Advance(task: Task): Task{
-    if (task.status === 'Todo'){return {...task, status:'In-Progress'}};
-    if (task.status === 'In-Progress') { return {...task, status:'Done'}};
+    if (task.status === "todo"){return {...task, status:"in-progress"}};
+    if (task.status === "in-progress") { return {...task, status:"done"}};
     return task
 }
 
@@ -16,17 +15,17 @@ let nextId = 1;
 
 // Add a new task — always starts as "todo".
 function addTask(tasks: Task[], title: string): Task[] {
-  const newTask: Task = { id: nextId++, title, status: "Todo" };
+  const newTask: Task = { id: nextId++, title, status: "todo" };
   return [...tasks, newTask];
 }
 
 //Marking task as done
 function completeTask(tasks: Task[], id: number): Task[] {
-    return tasks.map((t)=>(t.id === id ? {...t, status: 'Done'}: t))
+    return tasks.map((t)=>(t.id === id ? {...t, status: "done"}: t))
 }
 
 //return tasks matching the status:
-function filter(tasks: Task[], status: taskStatus): Task[]{
+function filterByStatus(tasks: Task[], status: TaskStatus): Task[]{
     return tasks.filter((t)=> t.status === status)
 } 
 
@@ -37,4 +36,3 @@ function advanceTask(task: Task[], id:number): Task[]{
 function deleteTask(task: Task[], id:number): Task[]{
     return task.filter((t)=> t.id !== id);
 }
-
