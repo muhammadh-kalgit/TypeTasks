@@ -1,0 +1,90 @@
+header{
+    color: white;
+    background-color:rgb(17, 18, 153);
+    padding:20px;
+    line-height: 1.5;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'segoe ui', sans-serif;
+    text-align:center;
+}
+
+main{
+    margin: 20px;
+}
+
+#title, #status, #add{
+    border: 2px solid grey;
+    border-radius:10px; 
+    padding:5px;
+    height: 40px;
+}
+
+#title{
+    width: 30rem;
+}
+
+#chips button{
+    border: 1px solid grey;
+    border-radius:13px; 
+    padding:5px;
+    height: 30px;
+    margin:5px;
+    width: 15%;
+}
+
+#chips{
+    margin: 20px;
+}
+
+input, select, #add{
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+li{
+    border: 1px solid grey;
+    padding: 12px;
+    margin: 5px;
+    border-radius: 15px;
+    corner-shape: squircle;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.badge, .delbtn, .addbtn, .done{
+    border: 1px solid rgb(199, 198, 198);
+    padding: 2px;
+    margin: 0px 5px 0px 0px;
+    border-radius:10px;
+    font-size: 15px;
+}
+
+.delbtn{
+    color: #C0392B;
+    width: 30px;
+    height:30px;
+    padding:2px;
+}
+
+.addbtn{
+    width: 100px;
+    height: 30px
+}
+
+.addbtn:hover{
+    color:rgb(17, 18, 153);
+    background-color: rgb(171, 171, 240);
+}
+
+.done{
+    color: grey;
+    background-color: rgb(226, 222, 222);
+}
+
+.delbtn:hover{
+    background-color: #f3bcb3;
+}
